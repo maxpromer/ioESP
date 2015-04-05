@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.android.ioesp" version="0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>ioESP</name>
+    <description>
+        ESP8266 io control.
+    </description>
+    <author email="max30012540@hotmail.com" href="http://www.host-1gb.com/">
+        Host-1gb Group
+    </author>
+	<preference name="permissions" value="none"/>
+    <content src="index.html" />
+    <access origin="*" />
+	<icon src="icon/ldpi.png" gap:platform="android" gap:density="ldpi" />
+	<icon src="icon/mdpi.png" gap:platform="android" gap:density="mdpi" />
+	<icon src="icon/hdpi.png" gap:platform="android" gap:density="hdpi" />
+	<icon src="icon/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+	<icon src="icon/xxhdpi.png" gap:platform="android" gap:density="xxhdpi" />
+</widget>

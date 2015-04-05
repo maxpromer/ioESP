@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ioESP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script>
+var JSFile = ['cordova.js', 'js/jquery-1.11.2.min.js', 'js/jquery.touchSwipe.min.js', 'js/app.js'];
+for (i = 0; i<JSFile.length;i++)
+	document.write('<script src="' + JSFile[i] + '"><\/script>');
+</script>
+</head>
+
+<body onload="onLoad()">
+<div id="back-background"></div>
+<article id="slide-menu">
+  <header>
+    <h1>ioESP</h1>
+    <span class="icon-right"><i class="md md-chevron-left slide-menu-hide"></i></span>
+  </header>
+  <section class="menu-list">
+    <ul>
+      <li><a data-href="index">Control</a></li>
+      <li><a data-href="manage">Manage</a></li>
+      <li><a data-href="settings">Settings</a></li>
+    </ul>
+    <hr />
+    <ul>
+      <li><a data-href="about">About</a></li>
+    </ul>
+  </section>
+</article>
+<header>
+  <span class="icon-left"><i class="md md-menu slide-menu-show"></i></span>
+  <h1 id="title">Control</h1>
+</header>
+<article data-type="page" data-page="index" data-title="Control">
+  <ul class="list-io">
+    
+  </ul>
+</article>
+<article data-type="page" data-page="manage" data-title="Manage" data-icon-right="md,md-add,new-io">
+  <ul class="list-io" id="edit-list">
+
+  </ul>
+</article>
+<article data-type="page" data-page="settings" data-title="Settings">
+  <div class="list-title">On open app</div>
+  <form class="form-settings">
+    <div class="ipedit-popup">
+      <label>ESP2866 IP address</label>
+      <div class="sub-text">192.168.4.1</div>
+    </div>
+  </form>
+</article>
+<article data-type="page" data-page="about" data-title="About">
+  <div class="text" style="text-align: center;"><img src="img/logo-mini.png" alt="Host-1gb logo"></div>
+  <div class="text">ioESP open source software by <a href="http://www.host-1gb.com/" target="_blank">Host-1gb Group</a></div>
+  <div class="text">
+    <ul class="text-list">
+      <li>Website: <a href="http://www.elec-za.com/ioesp-app" target="_blank">Elec-Za.com</a></li>
+      <li>GitHub: <a href="https://github.com/max30012540/ioESP" target="_blank">ioESP</a></li>
+    </ul>
+  </div>
+</article>
+
+<!-- DialogBox -->
+<div class="dialog" id="edit-dialog">
+  <header>
+    <span class="icon-left"><i class="md md-chevron-left DialogCancel"></i></span>
+    <h1 id="title">Edit</h1>
+    <span class="icon-right"><i class="md md-check Edit-Save"></i></span>
+  </header>
+  <form class="editor-form" id="edit-form">
+    <div>
+      <label>Name</label>
+      <input type="text" id="edit-name" required>
+    </div>
+    <div>
+      <label>GPIO Pin</label>
+      <select id="edit-pin" class="sty-select">
+        <option value="1">GPIO2</option>
+        <option value="2">GPIO4</option>
+        <option value="3">GPIO5</option>
+        <option value="4">GPIO12</option>
+        <option value="5">GPIO13</option>
+        <option value="6">GPIO14</option>
+        <option value="7">GPIO15</option>
+        <option value="8">GPIO16</option>
+      </select>
+    </div>
+    <input type="hidden" id="edit-id" value="0">
+  </form>
+</div>
+
+<div class="dialog" id="new-dialog">
+  <header>
+    <span class="icon-left"><i class="md md-chevron-left DialogCancel"></i></span>
+    <h1 id="title">New</h1>
+    <span class="icon-right"><i class="md md-check New-Save"></i></span>
+  </header>
+  <form class="editor-form" id="newio-form">
+    <div>
+      <label>Name</label>
+      <input type="text" id="new-name" required>
+    </div>
+    <div>
+      <label>GPIO Pin</label>
+      <select id="new-pin" class="sty-select">
+        <option value="1">GPIO2</option>
+        <option value="2">GPIO4</option>
+        <option value="3">GPIO5</option>
+        <option value="4">GPIO12</option>
+        <option value="5">GPIO13</option>
+        <option value="6">GPIO14</option>
+        <option value="7">GPIO15</option>
+        <option value="8">GPIO16</option>
+      </select>
+    </div>
+  </form>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="edit-ip">
+  <header>
+    <h2>ESP2866 IP address</h2>
+  </header>
+  <article>
+    <form class="editor-form" id="editip-form">
+      <div>
+        <input type="text" id="ip-address" placeholder="IP address" required>
+      </div>
+    </form>
+  </article>
+  <footer>
+    <button id="cancel">CANCEL</button>
+    <button id="ok">OK</button>
+  </footer>
+</div>
+
+<div class="page-loading">
+  <div class="bar">
+    <div></div>
+  </div>
+</div>
+</body>
+</html>
