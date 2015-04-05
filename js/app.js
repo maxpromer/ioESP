@@ -1,6 +1,6 @@
 // ioESP JavaScript & jQuery Library
 
-$(document).ready(function(e) { onDeviceReady(); });
+// $(document).ready(function(e) { onDeviceReady(); });
 
 function onLoad() {
 	document.addEventListener("deviceready", onDeviceReady, false);
