@@ -12,7 +12,7 @@ function onDeviceReady() {
 	}
 	
 	var ip = localStorage.ip;
-	if (IPValid(ip))
+	if (!IPValid(ip))
 		localStorage.ip = ip = "192.168.4.1";
 	$(".ipedit-popup").find("div.sub-text").text(ip);
 	

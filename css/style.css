@@ -286,10 +286,10 @@ ul.list-io > li > .right-icon.manage-icon-box > span{
 .popup{
 	position: fixed;
 	background: #FFF;
-	margin: 30px 10%;
+	margin: 30px 5%;
 	margin-top: 50px;
 	box-shadow: 0 0 22px rgba(0, 0, 0, 0.51);
-	width: 80%;
+	width: 90%;
 	display: none;
 	top: 0;
 	z-index: 1;
