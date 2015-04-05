@@ -2,7 +2,7 @@
 app for android power by phonegap.
 
 - Blog : http://www.elec-za.com/ioesp-app
-- App for android : soon.
+- App for android : https://play.google.com/store/apps/details?id=com.ioesp.android
 
 Power by Host-1gb.com (https://www.host-1gb.com/).
 
