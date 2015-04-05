@@ -7,7 +7,8 @@
     <author email="max30012540@hotmail.com" href="http://www.host-1gb.com/">
         Host-1gb Group
     </author>
-	<preference name="permissions" value="none"/>
+	<preference name="permissions" value="none" />
+	<preference name="orientation" value="portrait" />
     <content src="index.html" />
     <access origin="*" />
 	<icon src="icon/ldpi.png" gap:platform="android" gap:density="ldpi" />
